@@ -70,7 +70,7 @@ namespace BasicCSharp
             string actualReturnValue = GenericMethodDemoClass.ResolvableGenericMethod(new Duck());
 
             // correct the variable value to fix the test
-            const string expectedReturnValue = "";
+            const string expectedReturnValue = "ResolvableGenericMethod(T) called. T is Duck";
 
             Assert.Equal(expectedReturnValue, actualReturnValue);
         }
@@ -81,7 +81,7 @@ namespace BasicCSharp
             string actualReturnValue = GenericMethodDemoClass.NotResolvableGenericMethod<string>();
 
             // correct the variable value to fix the test
-            const string expectedReturnValue = "";
+            const string expectedReturnValue = "NotResolvableGenericMethod() called. T is String";
 
             Assert.Equal(expectedReturnValue, actualReturnValue);
         }

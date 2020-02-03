@@ -55,7 +55,7 @@ namespace BasicCSharp
             builder.Replace("Str", "W");
 
             // change "" in the following line to correct value.
-            const string expectedResult = "";
+            const string expectedResult = "Original Wing";
 
             Assert.Equal(expectedResult, builder.ToString());
         }
@@ -67,7 +67,7 @@ namespace BasicCSharp
             char characterAtIndex2 = originalString[2];
 
             // change "default(char)" to correct value.
-            const char expectedResult = default (char);
+            const char expectedResult = 'i';
 
             Assert.Equal(expectedResult, characterAtIndex2);
         }
@@ -79,7 +79,7 @@ namespace BasicCSharp
             string equivalent = "Original" + " String";
 
             // change "default(bool)" to correct value.
-            const bool expectedResult = default(bool);
+            const bool expectedResult = true;
 
             Assert.Equal(expectedResult, (str == equivalent));
         }
@@ -91,8 +91,8 @@ namespace BasicCSharp
             const string inDifferentCase = "oRiginal String";
 
             // change the variable values in the following 2 lines.
-            var caseSensitiveComparison = StringComparison.InvariantCultureIgnoreCase;
-            var caseInsensitiveComparison = StringComparison.InvariantCulture;
+            var caseInsensitiveComparison = StringComparison.InvariantCultureIgnoreCase;
+            var caseSensitiveComparison = StringComparison.InvariantCulture;
 
             Assert.False(originalString.Equals(inDifferentCase, caseSensitiveComparison));
             Assert.True(originalString.Equals(inDifferentCase, caseInsensitiveComparison));

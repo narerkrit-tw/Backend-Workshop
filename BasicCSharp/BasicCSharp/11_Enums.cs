@@ -15,8 +15,8 @@ namespace BasicCSharp
             #pragma warning restore 1718
 
             // change the variable value for following 2 lines to fix the test.
-            const bool expectedResultForBottomEqualsLeft = true;
-            const bool expectedResultForRightEqualsRight = false;
+            const bool expectedResultForBottomEqualsLeft = false;
+            const bool expectedResultForRightEqualsRight = true;
 
             Assert.Equal(expectedResultForBottomEqualsLeft, bottomEqualsLeft);
             Assert.Equal(expectedResultForRightEqualsRight, rightEqualsRight);
@@ -46,16 +46,16 @@ namespace BasicCSharp
             const int topValue = int.MinValue;
             const int bottomValue = int.MinValue;
 
-            Assert.True((BorderSideExplicity)leftValue == BorderSideExplicity.Left);
-            Assert.True((BorderSideExplicity)rightValue == BorderSideExplicity.Right);
-            Assert.True((BorderSideExplicity)topValue == BorderSideExplicity.Top);
-            Assert.True((BorderSideExplicity)bottomValue == BorderSideExplicity.Bottom);
+            Assert.True((BorderSideExplicity) leftValue == BorderSideExplicity.Left);
+            Assert.True((BorderSideExplicity) rightValue == BorderSideExplicity.Right);
+            Assert.True((BorderSideExplicity) topValue == BorderSideExplicity.Top);
+            Assert.True((BorderSideExplicity) bottomValue == BorderSideExplicity.Bottom);
         }
 
         [Fact]
         public void should_only_compare_values()
         {
-            const bool differentDeclareWithSameValueCompareResult = 
+            const bool differentDeclareWithSameValueCompareResult =
                 BorderSideExplicity.Left == BorderSideExplicity.LeftEquivalent;
 
             // change the variable value to fix the test.
@@ -68,21 +68,21 @@ namespace BasicCSharp
         public void should_increase_the_integer_according_to_layout()
         {
             // change the variable value for following 4 lines to fix the test.
-            const int leftValue = int.MinValue;
-            const int rightValue = int.MinValue;
-            const int topValue = int.MinValue;
-            const int bottomValue = int.MinValue;
+            const int leftValue = 12;
+            const int rightValue = 13;
+            const int topValue = 78;
+            const int bottomValue = 79;
 
-            Assert.True((BorderSideLayout)leftValue == BorderSideLayout.Left);
-            Assert.True((BorderSideLayout)rightValue == BorderSideLayout.Right);
-            Assert.True((BorderSideLayout)topValue == BorderSideLayout.Top);
-            Assert.True((BorderSideLayout)bottomValue == BorderSideLayout.Bottom);
+            Assert.True((BorderSideLayout) leftValue == BorderSideLayout.Left);
+            Assert.True((BorderSideLayout) rightValue == BorderSideLayout.Right);
+            Assert.True((BorderSideLayout) topValue == BorderSideLayout.Top);
+            Assert.True((BorderSideLayout) bottomValue == BorderSideLayout.Bottom);
         }
 
         [Fact]
         public void should_be_able_to_parse_enum_by_name()
         {
-            var parsedBottomEnumValue = (BorderSide)Enum.Parse(typeof(BorderSide), "Bottom");
+            var parsedBottomEnumValue = (BorderSide) Enum.Parse(typeof(BorderSide), "Bottom");
 
             // change the variable value to fix the test.
             const BorderSide expectedEnumValue = BorderSide.Left;
@@ -93,7 +93,7 @@ namespace BasicCSharp
         [Fact]
         public void should_be_able_to_parse_enum_by_value()
         {
-            var parsedBottomEnumValue = (BorderSide)Enum.Parse(typeof(BorderSide), "3");
+            var parsedBottomEnumValue = (BorderSide) Enum.Parse(typeof(BorderSide), "3");
 
             // change the variable value to fix the test.
             const BorderSide expectedEnumValue = BorderSide.Left;
@@ -107,7 +107,7 @@ namespace BasicCSharp
             const BorderSideFlag leftAndRight = BorderSideFlag.LeftAndRight;
 
             const bool includeLeft = (leftAndRight & BorderSideFlag.Left) != 0;
-            
+
             // change the variable value to fix the test.
             const bool expectedIncludeLeft = false;
 
