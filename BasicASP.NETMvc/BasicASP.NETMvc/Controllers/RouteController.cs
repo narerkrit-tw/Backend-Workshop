@@ -23,6 +23,9 @@ namespace BasicASP.NETMvc.Controllers
         [Route("index2")]
         public string Post()
         {
+            
+            
+            
             return "hello world";
         }
     }
